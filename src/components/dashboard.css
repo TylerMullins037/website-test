@@ -1,0 +1,106 @@
+/* Ensure the entire page spans the full width and height */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: #181a1b; /* Dark Slate background */
+  }
+  
+  /* Dashboard Container */
+  .dashboard-container {
+    background-color: #181a1b; /* Dark Slate background */
+    min-height: 100vh;
+    width: 100vw; /* Full width of the screen */
+    padding: 0;  /* Removed padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif; /* Cyberpunk-style font */
+    box-sizing: border-box;
+  }
+  
+  /* Dashboard Header */
+  .dashboard-header {
+    background-color: #202324; /* Slate Gray background */
+    color: #0084ff; /* Bright Blue */
+    padding: 20px;
+    width: 100vw; /* Full width */
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 0;
+    box-shadow: 0 0 10px #0084ff; /* Bright Blue glow effect */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  /* Dashboard Cards Container */
+  .dashboard-content {
+    display: flex;
+    justify-content: center; /* Centered content */
+    flex-wrap: wrap;
+    width: 100vw; /* Full width */
+    max-width: 1200px;
+    padding: 0 10px; /* Added minor padding to prevent overflow */
+    box-sizing: border-box;
+  }
+  
+  /* Cards */
+  .dashboard-card {
+    background-color: #202324; /* Slate Gray background */
+    box-shadow: 0 0 15px rgba(0, 132, 255, 0.8); /* Bright Blue glow */
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    width: calc(33.333% - 40px);
+    min-width: 300px;
+    color: #e0e0e0; /* Light Gray text */
+  }
+  
+  /* Card Title */
+  .card-title {
+    font-size: 1.5rem;
+    color: #0084ff; /* Bright Blue */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  /* Card Content */
+  .card-content {
+    font-size: 1rem;
+    color: #a0a0a0; /* Medium Gray */
+    margin-bottom: 10px;
+  }
+  
+  /* Buttons */
+  .card-button {
+    background-color: #0084ff; /* Bright Blue */
+    color: #181a1b; /* Dark Slate */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px #0084ff;
+  }
+  
+  .card-button:hover {
+    background-color: #00c853; /* Emerald Green */
+    box-shadow: 0 0 15px #00c853;
+    color: #181a1b;
+  }
+  
+  /* Responsive Fixes */
+  @media (max-width: 1024px) {
+    .dashboard-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .dashboard-card {
+      width: 90%; /* More space-efficient */
+    }
+  }
